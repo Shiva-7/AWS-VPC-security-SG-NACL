@@ -49,8 +49,8 @@ PING 10.0.26.39 (10.0.26.39) 56(84) bytes of data.<br/>
 64 bytes from 10.0.26.39: icmp_seq=3 ttl=127 time=0.997 ms<br/>
 
 * Curl from SGB to SGA (HTTP test)<br/>
-[ec2-user@ip-10-0-26-39 ~]$ curl http://3.81.220.3
-<html><body><h1>It works!</h1></body></html>
+[ec2-user@ip-10-0-26-39 ~]$ curl http://3.81.220.3<br/>
+<!---<html><body><h1>It works!</h1></body></html>--->
 [ec2-user@ip-10-0-26-39 ~]$
 
 
