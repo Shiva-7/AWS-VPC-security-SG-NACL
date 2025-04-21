@@ -23,3 +23,33 @@ Here’s what I did:
 * The challenge was a hands-on way to learn how to secure cloud environments using AWS tools like VPC, Security Groups, and NACLs, while making sure everything works smoothly and safely.
 
 * Finally tried setting and building up the same thing using Infrastructure as Code(IaC) with terraform.
+
+User data in AWS to install apache on the Ec2 instances:
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+
+# Outputs of the project:
+
+Here's the **SGA** were it shows the apache is running on first EC2 instance: 
+![image](https://github.com/user-attachments/assets/83356620-a1d9-4784-adfd-9152c15f335b)
+
+Here's the **SGB** were it shows the apache is running on second EC2 instance: 
+![image](https://github.com/user-attachments/assets/1c2aba3f-69e9-4cbc-b873-1c4bd0d538ed)
+
+# testing results using ping & curl through AWS CLI:
+
+* Ping SGB from SGA (ICMP test)
+PING 10.0.26.39 (10.0.26.39) 56(84) bytes of data.
+64 bytes from 10.0.26.39: icmp_seq=1 ttl=127 time=2.51 ms
+64 bytes from 10.0.26.39: icmp_seq=2 ttl=127 time=1.52 ms
+64 bytes from 10.0.26.39: icmp_seq=3 ttl=127 time=0.997 ms
+
+* Curl from SGB to SGA (HTTP test)
+[ec2-user@ip-10-0-26-39 ~]$ curl http://3.81.220.3
+<html><body><h1>It works!</h1></body></html>
+[ec2-user@ip-10-0-26-39 ~]$ 
+
+
