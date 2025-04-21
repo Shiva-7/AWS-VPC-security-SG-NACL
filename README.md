@@ -41,16 +41,16 @@ Here's the **SGB** were it shows the apache is running on second EC2 instance:
 
 # testing results using ping & curl through AWS CLI:
 
-* Ping SGB from SGA (ICMP test)
+* Ping SGB from SGA (ICMP test)<br/>
 
-PING 10.0.26.39 (10.0.26.39) 56(84) bytes of data.
-64 bytes from 10.0.26.39: icmp_seq=1 ttl=127 time=2.51 ms
-64 bytes from 10.0.26.39: icmp_seq=2 ttl=127 time=1.52 ms
-64 bytes from 10.0.26.39: icmp_seq=3 ttl=127 time=0.997 ms
+PING 10.0.26.39 (10.0.26.39) 56(84) bytes of data.<br/>
+64 bytes from 10.0.26.39: icmp_seq=1 ttl=127 time=2.51 ms<br/>
+64 bytes from 10.0.26.39: icmp_seq=2 ttl=127 time=1.52 ms<br/>
+64 bytes from 10.0.26.39: icmp_seq=3 ttl=127 time=0.997 ms<br/>
 
-* Curl from SGB to SGA (HTTP test)
-"""[ec2-user@ip-10-0-26-39 ~]$ curl http://3.81.220.3
+* Curl from SGB to SGA (HTTP test)<br/>
+[ec2-user@ip-10-0-26-39 ~]$ curl http://3.81.220.3
 <html><body><h1>It works!</h1></body></html>
-[ec2-user@ip-10-0-26-39 ~]$ """
+[ec2-user@ip-10-0-26-39 ~]$
 
 
