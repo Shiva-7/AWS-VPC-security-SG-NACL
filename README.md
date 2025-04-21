@@ -33,10 +33,12 @@ systemctl enable httpd
 
 # Outputs of the project:
 
-Here's the **SGA** were it shows the apache is running on first EC2 instance: 
+Here's the **SGA** were it shows the apache is running on first EC2 instance:
+
 ![image](https://github.com/user-attachments/assets/83356620-a1d9-4784-adfd-9152c15f335b)
 
 Here's the **SGB** were it shows the apache is running on second EC2 instance: 
+
 ![image](https://github.com/user-attachments/assets/1c2aba3f-69e9-4cbc-b873-1c4bd0d538ed)
 
 # testing results using ping & curl through AWS CLI:
@@ -50,7 +52,7 @@ PING 10.0.26.39 (10.0.26.39) 56(84) bytes of data.<br/>
 
 * Curl from SGB to SGA (HTTP test)<br/>
 [ec2-user@ip-10-0-26-39 ~]$ curl http://3.81.220.3<br/>
-<!---<html><body><h1>It works!</h1></body></html>--->
+//<html><body><h1>It works!</h1></body></html>//
 [ec2-user@ip-10-0-26-39 ~]$
 
 
